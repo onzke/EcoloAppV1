@@ -1,0 +1,14 @@
+<div class="landing-block">
+    <img src="assets/ecolo.png" alt="EcoloApp logo">
+    <div class="landing-links">
+         <!-- Pour changer de chemin, il y'a 2 méthodes : Via une méthode.-->
+         <!-- Appel de la méthode onContinue, qui redirigera vers le chemin d'accès aux gestes écologiques.-->
+      <button (click)="onContinue()">Continuer vers EcoloApp</button>
+    </div>
+  </div>
+
+  <form #emailForm="ngForm" (ngSubmit)="onSubmitForm(emailForm)">
+    <label for="emailInput">Inscrivez-vous pour recevoir notre newsletter !</label>
+    <input id="emailInput" name="userEmail" type="email" [(ngModel)]="userEmail" name="userEmail">
+    <button type="submit">OK !</button>
+</form>

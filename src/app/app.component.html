@@ -1,0 +1,9 @@
+<!-- <app-gesture-eco *ngFor="let GestureEco of gestEcos" [GestureEco]="GestureEco"></app-gesture-eco> -->
+
+<app-header></app-header>
+
+<!-- Router-Outlet : Indique où le chemin du composant doit s'activer. -->
+<router-outlet></router-outlet>
+
+<!-- Appel de la méthode Interval et de son pipe "Async", permettant de souscrire à un Observable pour afficher ses émissions dans le template. -->
+<h1>{{ interval$ | async }}</h1>

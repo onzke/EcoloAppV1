@@ -1,0 +1,18 @@
+<div class="box">
+    <!-- Appel des propriétés lié au composant associé. 
+         Afin d'appeler ces propriétés, on utilise la syntaxe d'interpolation.
+         L'interpolation est l'utilisation de doubles accolades autour de la propriété.
+    -->
+<h2>{{ GestureEco.title }}</h2>
+<p>{{ GestureEco.description }}</p>
+<button>{{ GestureEco.validGest }}</button>
+<p>{{ GestureEco.validDate}}</p>
+<!-- Cependant, quand les propriétés ne sont pas du coontenu HTML mais par exemple, des images, on utilise le Property Binding.
+     Le Property Bindng est l'utilisation de crocrets entre les attributs HTML spécifiques à l'image par exemple.
+-->
+<img [src]="GestureEco.imgUrl" [alt]="title">
+<!-- ngIf : Est une condition. -->
+<p *ngIf="GestureEco.location">Gestes écologiques à la {{GestureEco.location}}</p>
+
+<button (click)="onViewGestEco()">Voir plus...</button>
+</div>
